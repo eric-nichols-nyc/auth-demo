@@ -5,14 +5,14 @@ const User = require("./models/user");
   // Define data to seed
   const usersData = [
     {
-      name: "user1",
+      name: "user one",
       password: "user1",
       email: "user1123@aol.com",
       uname: "user1",
       contact: 6465059007
     },
     {
-        name: "user2",
+        name: "user two",
         password: "user2",
         email: "user2@aol.com",
         uname: "user2",
@@ -25,22 +25,7 @@ const User = require("./models/user");
       uname: "admin1",
       contact: 6465059007,
       role: "admin",
-    },
-    {
-        name: "user3",
-        password: "user3",
-        email: "user3@aol.com",
-        uname: "user3",
-        contact: 6465059007
-      },
-      {
-        name: "admin two",
-        password: "admin2",
-        email: "admin@aol.com",
-        uname: "admin2",
-        contact: 6465059007,
-        role: "admin"
-      }
+    }
     // Add more items as needed
   ];
 // Connect to MongoDB

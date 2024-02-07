@@ -47,25 +47,7 @@ nodemon app.js
       uname: "admin1",
       contact: 6465059007,
       role: "admin",
-    },
-    {
-        name: "user3",
-        password: "user3",
-        email: "user3@aol.com",
-        profileImage: "noimage.jpg",
-        uname: "user3",
-        contact: 6465059007,
-        role: "user",
-      },
-      {
-        name: "admin two",
-        password: "admin2",
-        email: "admin@aol.com",
-        profileImage: "noimage.jpg",
-        uname: "admin2",
-        contact: 6465059007,
-        role: "admin",
-      }
+    }
   ];
 ```
 
