@@ -8,8 +8,7 @@ html
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
     script.
-      const handleDBUpdates = async(url, method, obj) => {
-        console.log(url, method, obj)
+      const handleDbUpdates = async(url, method, obj) => {
         try{
             const res = await fetch(url, {
               method: method,
@@ -17,9 +16,10 @@ html
               headers: {'Content-Type': 'application/json'}
             })
             if(res.status === 201)
+            console.log('DB Updated')
             window.location.reload()
         }catch(err){
-          console.log(err)
+          console.error('ERROR: ', err)
         }
       }
 
