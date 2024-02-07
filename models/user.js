@@ -16,13 +16,19 @@ var userSchema=mongoose.Schema({
         type:String
     },
     profileimage:{
-        type:String
+        type:String,
+        default:'noimage.jpg',
     },
     uname:{
         type:String
     },
     contact:{
         type:Number
+    },
+    role:{
+        type:String,
+        default:'user',
+        enum:['user','admin']
     }
 });
 var User=module.exports=mongoose.model('user',userSchema);
