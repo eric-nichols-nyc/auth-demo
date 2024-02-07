@@ -12,8 +12,8 @@ block content
           if person && person.role === "admin"
               | Role: #{user.role} <br/>
               if user.role !== "admin"
-                button.btn.btn-secondary(type="button", onclick=`handleDBUpdate(${JSON.stringify(user.id)},'admin')`) Change Role to Admin
+                button.btn.btn-secondary(type="button", onclick=`handleDBUpdates('/users/put/','PUT', ${JSON.stringify({id: user.id, role:'admin'})})`) Change Role to Admin
               else
-                button.btn.btn-secondary(type="button", onclick=`handleDBUpdate(${JSON.stringify(user.id)}, 'user')`) Change Role to User
-              button.btn.btn-secondary(onclick=`handleDBDelete(${JSON.stringify(user.id)})`) Delete User
+                button.btn.btn-secondary(type="button", onclick=`handleDBUpdates('users/put/','PUT', ${JSON.stringify({id: user.id, role:'user'})})`) Change Role to User
+              button.btn.btn-secondary(onclick=`handleDBUpdates('/users/delete/','DELETE', ${JSON.stringify({id:user.id})})`) Delete User
 

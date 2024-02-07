@@ -8,25 +8,12 @@ html
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js')
     script.
-      const handleDBUpdate = async(id, role) => {
+      const handleDBUpdates = async(url, method, obj) => {
+        console.log(url, method, obj)
         try{
-            const res = await fetch('/users/put/', {
-              method: 'PUT',
-              body: JSON.stringify({id, role}),
-              headers: {'Content-Type': 'application/json'}
-            })
-            if(res.status === 201)
-            window.location.reload()
-        }catch(err){
-          console.log(err)
-        }
-      }
-      // Delete user
-      const handleDBDelete  = async(id) => {
-        try{
-            const res = await fetch('/users/delete/', {
-              method: 'DELETE',
-              body: JSON.stringify({id}),
+            const res = await fetch(url, {
+              method: method,
+              body: JSON.stringify(obj),
               headers: {'Content-Type': 'application/json'}
             })
             if(res.status === 201)
